@@ -60,4 +60,3 @@ int main()
     std::cout << resultSecond;
     return 0;
 }
-
