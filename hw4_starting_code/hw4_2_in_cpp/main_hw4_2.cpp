@@ -35,14 +35,11 @@ void dfs(std::vector<std::pair<int, int>> input, int iter, int& max, std::vector
         return;
     }
     //get input[iter]
-
-    // std::pair<int, int> p = input[iter];
-
+    std::pair<int, int> p = input[iter];
     //check adding with every possibility, need to keep a max value
     //perform operation before recursive calls?
     //if workingVector with current pair total capacity is under capacity, push_back it
-
-    // workingVector.push_back(p);
+    workingVector.push_back(p);
     int workingCapacity=0, workingVal=0;
     for(int i=0; i<workingVector.size(); ++i)
     {
@@ -51,7 +48,7 @@ void dfs(std::vector<std::pair<int, int>> input, int iter, int& max, std::vector
     }
     if(workingCapacity > maxCapacity)
     {
-        // workingVector.pop_back();
+        workingVector.pop_back();
         return;
     }
     else
@@ -72,20 +69,13 @@ void dfs(std::vector<std::pair<int, int>> input, int iter, int& max, std::vector
         //max = workingVector total value
         //best = workingVector
     //check somewhere, if a total value == max, return dfs() + 1?
-
-    // std::vector<std::pair<int, int>> currentV = workingVector;
-    for(int i=iter; i<input.size(); ++i)
+    std::vector<std::pair<int, int>> currentV = workingVector;
+    for(int i=1; iter+i<input.size(); ++i)
     {
-        workingVector.push_back(input[i]);
-        // workingVector = currentV;
+        workingVector = currentV;
         //calls dfs on next item in input
-        dfs(input, i+1, max, workingVector);
-        workingVector.pop_back();
+        dfs(input, iter+i, max, workingVector);
     }
-
-    //working vector push back
-    //dfs call
-    //working vector pop back
 }
 
 int main() 
@@ -103,10 +93,8 @@ int main()
     int max = 0;
     for(int i=0; i<inputItems.size(); ++i)
     {
-        workingVector.push_back(inputItems[i]);
-        // workingVector = {inputItems[i]};
-        dfs(inputItems, i+1, maxVal, workingVector);
-        workingVector.pop_back();
+        workingVector = {};
+        dfs(inputItems, i, maxVal, workingVector);
     }
     std::cout << "Item:";
     if(solutionsAmt > 1)
