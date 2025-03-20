@@ -50,9 +50,9 @@ void dfs(int current, std::vector<std::set<int>>& adjacencyList, int& markCount,
 int main() 
 {
     int vertices, edges;
-    std::vector<std::set<int>> adjacencyList(vertices);
     std::unordered_set<int> visited;
     std::cin >> vertices >> edges;
+    std::vector<std::set<int>> adjacencyList(vertices);
     for(int i=0; i<edges; i++)
     {
         int start, dest;
