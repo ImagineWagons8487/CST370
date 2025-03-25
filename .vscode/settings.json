@@ -78,7 +78,8 @@
         "__tuple": "cpp",
         "ios": "cpp",
         "locale": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.default.compilerPath": "C:/cygwin64/bin/g++.exe"
 }
