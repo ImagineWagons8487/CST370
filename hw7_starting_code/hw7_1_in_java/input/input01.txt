@@ -1,0 +1,11 @@
+10
+add 20
+add 30
+add 40
+add 15
+countLeaves
+countOneChildNodes
+add 25
+add 70
+countLeaves
+countOneChildNodes

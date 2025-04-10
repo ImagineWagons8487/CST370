@@ -1,0 +1,15 @@
+14
+add 25
+countLeaves
+add 10
+postOrder
+add 20
+add 40
+add 30
+add 70
+countLeaves
+preOrder
+add 50
+countOneChildNodes
+add 45
+height

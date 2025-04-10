@@ -1,0 +1,16 @@
+30
+14
+isBST
+append 10
+isBST
+append 50
+append 5
+append 20
+append 40
+append 70
+findFirstNode
+append 80
+isBST
+findFirstNode
+append 90
+levelOrder

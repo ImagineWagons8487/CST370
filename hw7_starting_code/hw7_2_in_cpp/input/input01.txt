@@ -1,0 +1,10 @@
+20
+8
+append 30
+append 40
+append 15
+append 25
+append 70
+isBST
+inOrder
+levelOrder

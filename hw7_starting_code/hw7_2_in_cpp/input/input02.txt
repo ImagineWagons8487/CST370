@@ -1,0 +1,9 @@
+10
+7
+findFirstNode
+append 5
+levelOrder
+append 15
+findFirstNode
+preOrder
+isBST
